@@ -1,0 +1,47 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8" /><style>body {margin: 0;padding: 0;font-family: sans-serif;}hr.solid {border-top: 3px;}div.marged {margin-left: 16px;margin-right: 16px;}div.grid {display: flex;flex-direction: row;flex: 1;border: solid;border-width: 2px 2px 2px 2px;margin-bottom: 20px;}div.field {min-width: 200px;border: solid;border-width: 0px 1px 0px 0px;}div.medium-field {flex: 1;}div.large-field {flex: 1;border: solid;border-width: 0px 1px 0px 0px;}div.row {display: flex;align-items: center;border: solid;border-width: 0px 0px 1px 0px;min-height: 40px;padding: 10px;}div.bottom {border: solid;border-width: 0px 0px 2px 0px;}div.no-bottom {border: solid;border-width: 0px 0px 0px 0px;}div.container {display: flex;flex-direction: row;justify-content: stretch;height: 100vh;overflow: hidden;}#right {display: flex;flex: 1;flex-direction: column;overflow-y: auto;background-color: #E5D0CC;}div.wrapper {display: flex;flex: 1;min-height: 0px;}div.nav {flex-direction: column;display: flex;width: 300px;justify-content: center;background-color: #BFACB5;overflow-y: hidden;border: solid;border-width: 0px 1px 1px 0px;}div.nav-item {text-align: center;margin-top: 5px;margin-bottom: 5px;padding: 10px;background-color: #172121;color: lightgray;font-weight: 900;}div.nav-item:hover {cursor: pointer;}div.red {background-color: rgb(200, 8, 8, 0.5);}div.orange {background-color: rgb(229, 110, 35, 0.8);}div.grey {background-color: rgb(100, 100, 100, 0.6);}div.no-opa {opacity: 1;}</style><title>Easy-typescript-documentation</title></head><body><script>function f(i){window.location.href = "#";
+    window.location.href = "#" + i.toString();}</script><div class="container"><div class="nav"><div onclick="f(0)" class="nav-item">@Doc</div><div onclick="f(1)" class="nav-item">@ClassName</div><div onclick="f(2)" class="nav-item">@ClassDesc</div><div onclick="f(3)" class="nav-item">@Name</div><div onclick="f(4)" class="nav-item">@Desc</div><div onclick="f(5)" class="nav-item">@Note</div><div onclick="f(6)" class="nav-item">@Color</div><div onclick="f(7)" class="nav-item">getJson</div><div onclick="f(8)" class="nav-item">getDocPage</div><div onclick="f(9)" class="nav-item">createClassAnnotation</div><div onclick="f(10)" class="nav-item">createPropertieAnnotation</div></div><div class="wrapper"><div id="right"><div class="marged">
+        <h1>Easy-typescript-documentation</h1>
+        <p>Documentation for the package <a href="https://www.npmjs.com/package/easy-typescript-documentation">easy-typescript-documentation</a>.</p>
+    </div><hr class="solid"></hr><div class="marged" 
+        id=0>
+        <h2>@Doc</h2>
+        <div class="marged"><p>Register a class to be used by the functions. <br/> Nothing will be outputed by the functions if this is not present.</p></div></div><hr class="solid"></hr><div class="marged" 
+        id=1>
+        <h2>@ClassName</h2>
+        <div class="marged"><p>Take a string as argument. <br/> Add a name to a class to be displayed.</p></div></div><hr class="solid"></hr><div class="marged" 
+        id=2>
+        <h2>@ClassDesc</h2>
+        <div class="marged"><p>Take a string as argument. <br/> Add a description to a class to be displayed.</p></div></div><hr class="solid"></hr><div class="marged" 
+        id=3>
+        <h2>@Name</h2>
+        <div class="marged"><p>Take a string as argument. <br/> Add a name to a propertie to be displayed.</p></div></div><hr class="solid"></hr><div class="marged" 
+        id=4>
+        <h2>@Desc</h2>
+        <div class="marged"><p>Take a string as argument. <br/> Add a description to a propertie to be displayed.</p></div></div><hr class="solid"></hr><div class="marged" 
+        id=5>
+        <h2>@Note</h2>
+        <div class="marged"><p>Take a string as argument. <br/> Add a note to a propertie to be displayed.</p></div></div><hr class="solid"></hr><div class="marged" 
+        id=6>
+        <h2>@Color</h2>
+        <div class="marged"><p>Take a DOC_COLOR as argument. ('red','orange','grey','none') <br/> Add a color highlight to a propertie.</p></div></div><hr class="solid"></hr><div class="marged" 
+        id=7>
+        <h2>getJson</h2>
+        <div class="marged"><p>Take an Object as argument. <br/>
+    Output a list of object representing the objects decorated by @Doc in the argument object. <br/>
+    The structure is available <a href="https://github.com/Lblenner/easy-typescript-documentation/tree/master">here</a>.</p></div></div><hr class="solid"></hr><div class="marged" 
+        id=8>
+        <h2>getDocPage</h2>
+        <div class="marged"><p>Take a name (string), an object containing class decorated with @Dodc and an optonal description (string) as arguments. <br/>
+    Output an html page as a string. <br/></p></div></div><hr class="solid"></hr><div class="marged" 
+        id=9>
+        <h2>createClassAnnotation</h2>
+        <div class="marged"><p>Take up to 3 string argument. <br/>
+    Those arguements can be typed like so: createClassAnnotation<string,string,string>("arg0","arg1","arg3"). <br/>
+    Output a decorator for a class that will take as many argument as specified. <br/>
+    The string arguments will be the key at which the values will be available in the json generated by getJson.</p></div></div><hr class="solid"></hr><div class="marged" 
+        id=10>
+        <h2>createPropertieAnnotation</h2>
+        <div class="marged"><p>Take up to 3 string argument. <br/>
+    Those arguements can be typed like so: createPropertieAnnotation<string,string,string>("arg0","arg1","arg3"). <br/>
+    Output a decorator for a arguments that will take as many argument as specified. <br/>
+    The string arguments will be the key at which the values will be available in the json generated by getJson.</p></div></div><hr class="solid"></hr></div></div></body></html>

@@ -1,0 +1,107 @@
+"use strict";
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.mockCreatePropertie = exports.mockCreateClass = exports.mockGetDoc = exports.mockGetJson = exports.mockColor = exports.mockNote = exports.mockDesc = exports.mockName = exports.mockClassdesc = exports.mockClassName = exports.mockDoc = void 0;
+const easy_typescript_documentation_1 = require("easy-typescript-documentation");
+let mockDoc = class mockDoc {
+};
+mockDoc = __decorate([
+    easy_typescript_documentation_1.Doc,
+    easy_typescript_documentation_1.ClassName("@Doc"),
+    easy_typescript_documentation_1.ClassDesc("Register a class to be used by the functions. <br/> Nothing will be outputed by the functions if this is not present.")
+], mockDoc);
+exports.mockDoc = mockDoc;
+let mockClassName = class mockClassName {
+};
+mockClassName = __decorate([
+    easy_typescript_documentation_1.Doc,
+    easy_typescript_documentation_1.ClassName("@ClassName"),
+    easy_typescript_documentation_1.ClassDesc("Take a string as argument. <br/> Add a name to a class to be displayed.")
+], mockClassName);
+exports.mockClassName = mockClassName;
+let mockClassdesc = class mockClassdesc {
+};
+mockClassdesc = __decorate([
+    easy_typescript_documentation_1.Doc,
+    easy_typescript_documentation_1.ClassName("@ClassDesc"),
+    easy_typescript_documentation_1.ClassDesc("Take a string as argument. <br/> Add a description to a class to be displayed.")
+], mockClassdesc);
+exports.mockClassdesc = mockClassdesc;
+let mockName = class mockName {
+};
+mockName = __decorate([
+    easy_typescript_documentation_1.Doc,
+    easy_typescript_documentation_1.ClassName("@Name"),
+    easy_typescript_documentation_1.ClassDesc("Take a string as argument. <br/> Add a name to a propertie to be displayed.")
+], mockName);
+exports.mockName = mockName;
+let mockDesc = class mockDesc {
+};
+mockDesc = __decorate([
+    easy_typescript_documentation_1.Doc,
+    easy_typescript_documentation_1.ClassName("@Desc"),
+    easy_typescript_documentation_1.ClassDesc("Take a string as argument. <br/> Add a description to a propertie to be displayed.")
+], mockDesc);
+exports.mockDesc = mockDesc;
+let mockNote = class mockNote {
+};
+mockNote = __decorate([
+    easy_typescript_documentation_1.Doc,
+    easy_typescript_documentation_1.ClassName("@Note"),
+    easy_typescript_documentation_1.ClassDesc("Take a string as argument. <br/> Add a note to a propertie to be displayed.")
+], mockNote);
+exports.mockNote = mockNote;
+let mockColor = class mockColor {
+};
+mockColor = __decorate([
+    easy_typescript_documentation_1.Doc,
+    easy_typescript_documentation_1.ClassName("@Color"),
+    easy_typescript_documentation_1.ClassDesc("Take a DOC_COLOR as argument. ('red','orange','grey','none') <br/> Add a color highlight to a propertie.")
+], mockColor);
+exports.mockColor = mockColor;
+let mockGetJson = class mockGetJson {
+};
+mockGetJson = __decorate([
+    easy_typescript_documentation_1.Doc,
+    easy_typescript_documentation_1.ClassName("getJson"),
+    easy_typescript_documentation_1.ClassDesc(`Take an Object as argument. <br/>
+    Output a list of object representing the objects decorated by @Doc in the argument object. <br/>
+    The structure is available <a href="https://github.com/Lblenner/easy-typescript-documentation/tree/master">here</a>.`)
+], mockGetJson);
+exports.mockGetJson = mockGetJson;
+let mockGetDoc = class mockGetDoc {
+};
+mockGetDoc = __decorate([
+    easy_typescript_documentation_1.Doc,
+    easy_typescript_documentation_1.ClassName("getDocPage"),
+    easy_typescript_documentation_1.ClassDesc(`Take a name (string), an object containing class decorated with @Dodc and an optonal description (string) as arguments. <br/>
+    Output an html page as a string. <br/>`)
+], mockGetDoc);
+exports.mockGetDoc = mockGetDoc;
+let mockCreateClass = class mockCreateClass {
+};
+mockCreateClass = __decorate([
+    easy_typescript_documentation_1.Doc,
+    easy_typescript_documentation_1.ClassName("createClassAnnotation"),
+    easy_typescript_documentation_1.ClassDesc(`Take up to 3 string argument. <br/>
+    Those arguements can be typed like so: createClassAnnotation<string,string,string>("arg0","arg1","arg3"). <br/>
+    Output a decorator for a class that will take as many argument as specified. <br/>
+    The string arguments will be the key at which the values will be available in the json generated by getJson.`)
+], mockCreateClass);
+exports.mockCreateClass = mockCreateClass;
+let mockCreatePropertie = class mockCreatePropertie {
+};
+mockCreatePropertie = __decorate([
+    easy_typescript_documentation_1.Doc,
+    easy_typescript_documentation_1.ClassName("createPropertieAnnotation"),
+    easy_typescript_documentation_1.ClassDesc(`Take up to 3 string argument. <br/>
+    Those arguements can be typed like so: createPropertieAnnotation<string,string,string>("arg0","arg1","arg3"). <br/>
+    Output a decorator for a arguments that will take as many argument as specified. <br/>
+    The string arguments will be the key at which the values will be available in the json generated by getJson.`)
+], mockCreatePropertie);
+exports.mockCreatePropertie = mockCreatePropertie;
